@@ -51,7 +51,7 @@ header {
 	margin: 0 auto;
 	display: flex;
 	flex-flow: row wrap;
-	/*flex-direction: column;*/
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
@@ -61,6 +61,7 @@ header h1 {
 	margin: 0;
 	padding: 38px 0 20px 0;
 	text-align: left;
+	border-bottom: #77a466 solid 3px;
 }
 header h1 span {
 	color: #77a466;
@@ -81,8 +82,8 @@ header nav ul li {
 	font-weight: 700;
 	font-size: 0.875rem;
 	padding: 10px;
-	text-align: left;
-	display: inline;
+	text-align: center;
+	display: block;
 }
 header nav ul li a{
 	text-decoration: none;
@@ -176,4 +177,54 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 14px;
+}
+
+/*	TABLET STYLES	*/
+@media all and (min-width:768px) {
+ .bottom-section{
+	flex-flow: row nowrap;
+	align-items: flex-start;
+ }
+
+ .section-one{
+	border-right: #eee 1px solid;
+	padding-left: 20px;
+ }
+
+ .section-two{
+	border-right: #eee 1px solid;
+ }
+
+ .section-two h3{
+	padding-left: 30px;
+ }
+
+ .section-three h3{
+	padding-left: 30px;
+ }
+
+ footer{
+	margin-top: 50px;
+	width: 100%;
+ }
+}
+ 
+/*	DESKTOP STYLES	*/
+@media all and (min-width:1200px) {
+ header{
+	flex-flow: row nowrap;
+ }
+
+ header nav ul{
+	display:inline-flex;
+	margin: 0;
+	padding: 0;
+ }
+
+ header h1{
+	width: 50%;
+	border-bottom: none;
+	text-align: left;
+	padding: 38px 0;
+ }
 }
